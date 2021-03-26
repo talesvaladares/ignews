@@ -5,6 +5,10 @@ yarn add react-icons
 yarn add stripe
 yarn add next-auth
 yarn add @types/next-auth -D
+yarn add @types/next-auth@3.7.1 -D
 yarn add faunadb
 yarn add axios
 yarn add @stripe/stripe-js
+yarn add @prismicio/client
+yarn add prismic-dom
+yarn add @types/prismic-dom
