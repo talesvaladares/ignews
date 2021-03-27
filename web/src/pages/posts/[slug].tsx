@@ -45,7 +45,10 @@ export const getServerSideProps: GetServerSideProps = async ({req, params}) => {
 
     console.log('conta do usuario'+ JSON.stringify(session, null, 2))
 
-    if(!session.activeSubscription){
+
+    //não funciona com session.activeSubscription, por enqueantoo vou deixar sem
+    // if(!session?.activeSubscription){
+    if(!session){
 
         return {
             redirect: {
@@ -59,7 +62,7 @@ export const getServerSideProps: GetServerSideProps = async ({req, params}) => {
 
     const response = await prismic.getByUID('post', String(slug), {});
 
-    console.log('post recebido' + JSON.stringify(response, null , 2))
+    // console.log('post recebido' + JSON.stringify(response, null , 2))
 
     const post = {
         slug,

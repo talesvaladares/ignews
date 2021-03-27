@@ -39,11 +39,11 @@ export async function saveSubscription(
             )
         );
     }
-   else{
-       console.log('entrei no else do fauna')
-       await fauna.query(
-           query.Replace(
-               query.Select(
+    else{
+      
+        await fauna.query(
+            query.Replace(
+                query.Select(
                    "ref",
                     query.Get(
                         query.Match(
@@ -52,9 +52,8 @@ export async function saveSubscription(
                         )
                     )
                 ),
-               {data: subscriptionData}
-           )
+                {data: subscriptionData}
+            ),
         );
-
-   }
+    }
 };

@@ -28,7 +28,6 @@ export function SubscriberButton({priceId}: SubscriberButtonProps){
 
         try{
 
-            console.log('entrei aqui');
             const response = await api.post('/subscriber');
 
             const {sessionId} = response.data;
@@ -38,7 +37,7 @@ export function SubscriberButton({priceId}: SubscriberButtonProps){
             await stripe.redirectToCheckout({sessionId});
         }
         catch(err){
-            console.log('erro no checkout')
+            
             alert(err.message);
         }
 

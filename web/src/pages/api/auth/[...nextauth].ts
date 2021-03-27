@@ -32,7 +32,7 @@ export default NextAuth({
                             query.Match(
                                 query.Index('subscription_by_user_ref'),
                                 query.Select(
-                                    'ref',
+                                    "ref",
                                     query.Get(
                                         query.Match(
                                             query.Index('user_by_email'),
@@ -43,11 +43,13 @@ export default NextAuth({
                             ),
                             query.Match(
                                 query.Index('subscription_by_status'),
-                                "active"                                
+                                "active"
                             )
-                        ]) 
+
+                        ])
                     )
                 );
+                
                 
                 console.log('status da conta ' + userActiveSubscription)
                 return {
@@ -55,7 +57,8 @@ export default NextAuth({
                     activeSubscription: userActiveSubscription
                 };
             }
-            catch{
+            catch(err){
+                console.log('erro da session'+err)
                 return {
                     ...session,
                     activeSubscription: null
@@ -107,11 +110,11 @@ export default NextAuth({
                         )  
                     )
                 );
-                console.log('loguei')
+                // console.log('loguei')
                 return true; 
             }
             catch(err){
-                console.log('nao loguei:'+ err)
+                // console.log('nao loguei:'+ err)
                 return false;
             };
         }
