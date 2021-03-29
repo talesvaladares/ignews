@@ -47,8 +47,8 @@ export const getServerSideProps: GetServerSideProps = async ({req, params}) => {
 
 
     //não funciona com session.activeSubscription, por enqueantoo vou deixar sem
-    // if(!session?.activeSubscription){
-    if(!session){
+    if(!session?.activeSubscription){
+    // if(!session){
 
         return {
             redirect: {
