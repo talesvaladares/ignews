@@ -7,7 +7,7 @@
 ![Página inical do site](https://github.com/talesvaladares/ignews/blob/main/ignews-home.png) 
 ### Página inicial do site.
 ---
-![Página de post](https://github.com/talesvaladares/ignews/blob/main/ignews-home.png) 
+![Página de post](https://github.com/talesvaladares/ignews/blob/main/post-logado.png) 
 ### Página de post, acessada por um usuário autenticado e assinante do site.
 ---
 
