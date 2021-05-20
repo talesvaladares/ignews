@@ -12,3 +12,12 @@ yarn add @stripe/stripe-js
 yarn add @prismicio/client
 yarn add prismic-dom
 yarn add @types/prismic-dom
+yarn add jest jest-dom @testing-library/jest-dom @testing-library/dom @testing-library/react babel-jest -D
+yarn add identity-obj-proxy -D
+yarn add ts-jest -D
+
+1 Jest: É o framework de testes para javascript, basicamente a base de tudo para a gente estar fazendo os testes, ele provê a maioria das ferramentas que vamos utilizar, como por exemplo o describe, it, test, etc.
+2 @testing-library/jest-dom: É uma biblioteca que adiciona toda a parte para verificar diversas coisas de acordo com uma DOM que foi gerada, como por exemplo classes com o toHaveClass, para verificar se o elemento está desabilitado com o toBeDisabled, etc. É como se fosse uma forma de automatizar essa parte de testar a DOM com o jest.
+3 @testing-library/dom: Adiciona uma forma de utilizar a DOM durante os testes que facilita muito na hora de fazer testes, adicionando ferramentas novas como o data-testid, mas basicamente você pode ver vários exemplos na docs deles: https://testing-library.com/docs/dom-testing-library/example-intro
+4 @testing-library/react: É a integração disso tudo com o React, para conseguirmos escrever testes para nossos componentes react.
+5 babel-jest: É o que nos permite fazer configurações adicionais utilizando o babel, podemos adicionar presets e configurações específicas para que nosso código seja entendido pelos frameworks que estamos usando.

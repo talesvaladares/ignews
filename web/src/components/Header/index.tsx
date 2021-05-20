@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-
 import styles from './styles.module.scss';
 
 import {SiginButton} from '../SigninButton';
